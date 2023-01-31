@@ -1,1 +1,12 @@
-<p>dynamicpage works!</p>
+<div *ngIf="loading">
+    loading
+    <br />
+    <br />
+    Notice how slow this is? Let's see if caching.guru can improve this...
+</div>
+<div *ngIf="!loading">
+    <div *ngFor="let entry of entries">
+        <h1>{{entry.title}}</h1>
+        <p>{{entry.message}}</p>
+    </div>
+</div>

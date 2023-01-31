@@ -13,6 +13,11 @@ const routes: Routes = [
     path: 'dynamic',
     component: DynamicpageComponent,
     title: 'Complex Anguar Example App'
+  },
+  {
+    path: 'about',
+    component: DynamicpageComponent,
+    title: 'The Angular Speed Problem'
   }
 ];
 
