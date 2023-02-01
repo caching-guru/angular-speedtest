@@ -7,13 +7,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DynamicpageComponent } from './dynamicpage/dynamicpage.component';
 import { StaticpageComponent } from './staticpage/staticpage.component';
+import { EscapedPipe } from './escaped.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     DynamicpageComponent,
     StaticpageComponent,
-    AboutComponent
+    AboutComponent,
+    EscapedPipe
   ],
   imports: [
     BrowserModule,

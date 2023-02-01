@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './about/about.component';
 import { DynamicpageComponent } from './dynamicpage/dynamicpage.component';
 import { StaticpageComponent } from './staticpage/staticpage.component';
 
@@ -16,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: 'about',
-    component: DynamicpageComponent,
+    component: AboutComponent,
     title: 'The Angular Speed Problem'
   }
 ];

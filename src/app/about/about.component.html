@@ -1,1 +1,14 @@
-<p>about works!</p>
+
+
+<div style="width:600px;">
+<h1>The Angular Speed Problem</h1>
+The problem with Angular apps is that they are mostly rendered in the client. The actual HTML looks just like this:
+<pre class="language-html line-numbers" data-line="14"><code class="language-html">{{indexHtml|escaped}}</code></pre>
+<br />
+On the other hand, the rendered HTML looks more like this:
+<pre class="language-html line-numbers"><code class="language-html">{{indexRenderedHtml|escaped}}</code></pre>
+
+<br />
+The actual HTML is much larger and the browser had to do all of this <i>before</i> the actual site was rendered and usable. 
+
+    </div>
