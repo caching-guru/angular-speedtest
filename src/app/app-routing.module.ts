@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { DynamicpageComponent } from './dynamicpage/dynamicpage.component';
 import { StaticpageComponent } from './staticpage/staticpage.component';
+import { ExampleTableComponent } from './example-table/example-table.component';
 
 const routes: Routes = [
   {
@@ -19,7 +20,16 @@ const routes: Routes = [
     path: 'about',
     component: AboutComponent,
     title: 'The Angular Speed Problem'
-  }
+  },
+  {
+    path: 'example',
+    component: ExampleTableComponent,
+    title: 'The Angular Speed Problem'
+  },
+  {
+    path: 'main',
+    loadChildren: () => import('./sub-section-module/sub-section-module.module').then( m => m.SubSectionModuleModule),
+  },
 ];
 
 @NgModule({

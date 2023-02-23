@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { DynamicpageComponent } from './dynamicpage/dynamicpage.component';
 import { StaticpageComponent } from './staticpage/staticpage.component';
 import { EscapedPipe } from './escaped.pipe';
+import { ExampleTableComponent } from './example-table/example-table.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { EscapedPipe } from './escaped.pipe';
     DynamicpageComponent,
     StaticpageComponent,
     AboutComponent,
-    EscapedPipe
+    EscapedPipe,
+    ExampleTableComponent
   ],
   imports: [
     BrowserModule,

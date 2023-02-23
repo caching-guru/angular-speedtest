@@ -1,0 +1,19 @@
+<div>
+    <button #mybutton class="btn btn-default">Click me</button>
+</div>
+<div class="exampleContainer">
+    <table class="myTable">
+        <thead>
+            <tr>
+                <th>Website</th>
+                <th>Framework</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of myData; trackBy: trackByFn">
+                <td>{{data.website}}</td>
+                <td>{{data.type}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
