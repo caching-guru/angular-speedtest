@@ -1,5 +1,6 @@
 import { Component, AfterContentInit, ViewChild, OnInit, ElementRef } from '@angular/core';
 import { fromEvent } from 'rxjs';
+import { InMemoryDataService } from '../Services/in-memory-data.service';
 
 @Component({
   selector: 'app-example-table',
@@ -11,25 +12,10 @@ export class ExampleTableComponent implements OnInit, AfterContentInit {
   @ViewChild('mybutton') mybutton: ElementRef;
   public myData: any = [];
 
-  public constructor() {}
+  public constructor(private inMemoryService: InMemoryDataService) {}
 
   public ngOnInit(): void {
-    this.myData = [{
-      "website": "Caching Guru",
-      "type": "Angular"
-    },
-    {
-      "website": "Caching Guru",
-      "type": "React"
-    },
-    {
-      "website": "Caching Guru",
-      "type": "Ionic"
-    },
-    {
-      "website": "Caching Guru",
-      "type": "Vue"
-    }]
+    this.myData = this.inMemoryService.createDb().data;
   }
 
   ngAfterContentInit() {

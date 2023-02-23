@@ -9,6 +9,8 @@ import { DynamicpageComponent } from './dynamicpage/dynamicpage.component';
 import { StaticpageComponent } from './staticpage/staticpage.component';
 import { EscapedPipe } from './escaped.pipe';
 import { ExampleTableComponent } from './example-table/example-table.component';
+import { InMemoryDataService } from './Services/in-memory-data.service';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,11 @@ import { ExampleTableComponent } from './example-table/example-table.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    InMemoryWebApiModule.forRoot(InMemoryDataService)
+
   ],
-  providers: [],
+  providers: [InMemoryDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
